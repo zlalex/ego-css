@@ -1,0 +1,227 @@
+@import "../var/var.scss";
+@import "../lib/mixin.scss";
+
+.al-dialog,
+.al-message {
+    position: fixed;
+    z-index: 10;
+    @include pos-center(20%, 50%, 0, -50%);
+    min-width: $dialog-min__width;
+    background-color: $gf;
+    @include border($e6);
+    @include shadow($f2);
+    .al-context__header {
+        @include abs();
+        width: 100%;
+        min-height: $message-title__height;
+        padding: 0 10px;
+        line-height: $message-title__height;
+        background-color: $f8;
+        .al-icon{
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+            transition: all .5s;
+            &:hover{
+                transform: rotateZ(270deg);
+                transform-origin: 50% 50%;
+                transition: all .5s;
+            }
+        }
+    }
+    .al-context__content {
+        padding: 35px 10px 50px;
+        .al-icon{
+            float: left;
+            font-size: 34px;
+        }
+        .al-icon__warning{
+            color: $main-warn;
+        }
+        .al-icon__success{
+            color: $main-success;
+        }
+        .al-icon__delete{
+            color: $main-danger;
+        }
+        p{
+            margin-top: 15px;
+            height: $default-min__height;
+            line-height: $default-min__height;
+            white-space: nowrap;
+        }
+    }
+    .al-context__footer {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 0 5px;
+        text-align: center;
+    }
+}
+
+.al-dialog {
+    min-height: $dialog-min__height;
+    &.al-dialog__tiny{
+        width: $dialog-tiny__width;
+    }
+    &.al-dialog__small{
+        width: $dialog-small__width;
+    }
+    &.al-dialog__large{
+        width: $dialog-large__width;
+    }
+    &.al-dialog__full{
+        top: 0;
+        width: $dialog-full__width;
+        height: 100%;
+    }
+}
+
+.al-message {
+    min-height: $message-min__height;
+}
+
+.al-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $g0;
+    opacity: .3;
+}
+
+.al-tab{
+    .al-table__wrap{
+        @include clearfix();
+        border-bottom: 1px solid $e6;
+    }
+    .al-tab__pane{
+        position: relative;
+        bottom: -1px;
+        float: left;
+        padding: 0 20px;
+        line-height: 30px;
+        cursor: pointer;
+        @include border(transparent);
+        &.active{
+            color: $main-blue;
+            border-color: $e6;
+            border-bottom-color: $gf;
+            &::after{
+                content: "";
+                position: absolute;
+                width: 100%;
+                top: -1px;
+                left: 0;
+                height: 2px;
+                background-color: $main-blue;
+            }
+        }
+    }
+    &.al-tab-type__card{
+        background-color: $f9;
+        @include border($e6);
+        .al-table__wrap{
+            border-bottom: 0 none;
+        }
+        .al-tab__pane{
+            bottom: 0;
+            @include border(transparent);
+            margin-left: -1px;
+            &.active{
+                border-left-color: $e6;
+                border-right-color: $e6;
+                background-color: $gf;
+                &::after{
+                    top: inherit;
+                    bottom: -2px;
+                    height: 1px;
+                    background-color: $gf;
+                }
+            }
+        }
+    }
+}
+
+.al-table{
+    overflow: auto;
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th{
+        padding: 10px 15px;
+    }
+    td{
+        padding: 6px 15px;
+    }
+    th,
+    td{
+        font-weight: 400;
+        color: $g40;
+        line-height: 1;
+        white-space: nowrap;
+        @include border($e6);
+    }
+    tr:hover td{
+        background-color: $f8;
+    }
+    .al-table__header{
+        background-color: $f8;
+    }
+    .al-table__body{
+        position: relative;
+        top: -1px;
+        .al-btn{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.al-menu{
+    float: left;
+    width: auto;
+    min-width: $menu-min__width ;
+    color: $cd;
+    line-height: 2 * $menu-title__indent;
+    background-color: $main-navy;
+    .al-menu__title{
+        height: 2 * $menu-title__indent;
+        padding: 0 $menu-title__indent;
+        cursor: pointer;
+        &:hover{
+            background-color: $deep-black;
+        }
+        &.active{
+            color: $gf;
+            background-color: $main-blue;
+        }
+    }
+    .al-menu__title + .al-menu__group{
+        display: none;
+    }
+}
+
+.al-menu__group{
+    >.al-menu__item{
+        &.active{
+            >.al-menu__group{
+                display: block;
+                background-color: $main-black;
+            }
+        }
+    }
+    .al-menu__group{
+        .al-menu__title{
+            padding-left: $menu-title__indent * 2;
+        }
+        .al-menu__group{
+            .al-menu__title{
+                padding-left: $menu-title__indent * 3;
+            }
+        }
+    }
+}

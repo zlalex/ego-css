@@ -1,0 +1,89 @@
+.al-fl {
+  float: left; }
+
+.al-fr {
+  float: right; }
+
+.al-clearfix::before {
+  content: '';
+  display: table; }
+
+.al-clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+  visibility: hidden; }
+
+.al-abs {
+  position: absolute; }
+
+.al-rel {
+  position: relative; }
+
+.al-fixed {
+  position: fixed; }
+
+.al-auto {
+  margin-left: auto;
+  margin-right: auto; }
+
+.al-center__level {
+  left: 50%;
+  transform: translateX(-50%); }
+
+.al-center__vertical {
+  top: 50%;
+  transform: translateY(-50%); }
+
+.al-center__just {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.al-align__center {
+  text-align: center; }
+
+.al-align__left {
+  text-align: left; }
+
+.al-align__right {
+  text-align: right; }
+
+.al-indent {
+  text-indent: 2em; }
+
+.al-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.al-para {
+  text-align: justify;
+  line-height: 1.5; }
+
+.al-img_just {
+  text-align: center; }
+  .al-img_just::after {
+    content: '';
+    vertical-align: middle; }
+  .al-img_just img {
+    width: auto;
+    vertical-align: middle; }
+
+.al-block {
+  display: block; }
+
+.al-inline__block {
+  display: inline-block; }
+
+.al-show {
+  display: block !important; }
+
+.al-hide {
+  display: none !important; }
+
+.al-flex__wrap {
+  display: flex; }
+  .al-flex__wrap .al-flex__item {
+    align-items: center;
+    justify-content: space-between; }

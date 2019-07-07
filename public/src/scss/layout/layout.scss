@@ -1,0 +1,100 @@
+@import "../var/var.scss";
+@import "../lib/mixin.scss";
+
+.al-contain,
+.al-row{
+    @include clearfix();
+}
+
+.al-row{
+    display: block;
+    float: left;
+    width: 100%;
+    [class*="al-col__"]{
+        float: left;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    @each $col in 1,2,3,4,6,8,12,24 {
+        .al-col__#{$col}{
+            width: $col * 100% / 24;
+        }
+        .al-offset-left__#{$col}{
+            margin-left: $col * 100% / 24;
+        }
+        .al-offset-right__#{$col}{
+            margin-right: $col * 100% / 24;
+        }
+    } 
+}
+
+[class*="al-col__"]{
+    min-height: $default-min__height;
+}
+
+.al-type__page{
+    width: $website-type__page;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.al-layout__page{
+    @include abs();
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    &.website{
+        padding-top: $website-head__height;
+        padding-bottom: $website-footer__height;
+        .al-layout__header{
+            height: $website-head__height;
+        }
+        .al-layout__footer{
+            height: $website-footer__height;
+        }
+    }
+    &.project{
+        padding-top: $project-head__height;
+        padding-bottom: $project-footer__height;
+        .al-layout__header{
+            height: $project-head__height;
+            background-color: $main-black; 
+        }
+        .al-layout__footer{
+            background: $f2;
+        }
+    }    
+}
+
+.al-layout__header{
+    @include abs();
+    width: 100%;
+    background: $gf;
+}
+
+.al-layout__menu{
+    min-width: 180px;
+    background: $main-navy;
+}
+
+.al-layout__content{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    .al-layout__context{
+        flex: 1;
+        padding: 10px;
+    }
+}
+
+.al-layout__footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 30px;
+    color: $g69;
+    font-size: $h5-size;
+    background: $gf;
+}

@@ -1,0 +1,41 @@
+@import "var/var.scss";
+
+body{
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: $font-family;
+}
+
+h1{
+    font-size: $h1-size;
+}
+
+h2{
+    font-size: $h2-size;
+}
+
+h3{
+    font-size: $h3-size;
+}
+
+h4{
+    font-size: $h4-size;
+}
+
+h5{
+    font-size: $h5-size;
+}
+
+a,img,div,span,
+input,label,button,
+textarea{
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul,
+ol{
+    list-style: none;
+}
+
+@import "layout/init.scss";
+@import "lib/animate.scss";

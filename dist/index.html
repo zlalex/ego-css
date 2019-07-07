@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Avalon CSS</title>
+    <link rel="stylesheet" href="css/prefixer/reset.css">
+    <link rel="stylesheet" href="css/prefixer/init.css">
+    <style>
+         :root {
+            --max-width: 1200px;
+            --max-pre: 1120px;
+        }
+        
+        body {
+            background: #282828;
+        }
+        
+        h1 {
+            color: #fff;
+            line-height: 100px;
+        }
+        
+        .pre {
+            width: 90%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            color: #fff;
+            padding: 20px 0;
+        }
+        
+        .demo-wrap {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 10px;
+            background: #fff;
+        }
+        
+        .btn-default__wrap,
+        .form-default__wrap {
+            max-width: var(--max-pre);
+            padding: 20px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            transition: all 0.5s;
+        }
+        
+        .btn-default__wrap:hover,
+        .form-default__wrap:hover {
+            box-shadow: 0 0 8px 0 #ccc;
+            transition: all 0.5s;
+        }
+        
+        .icon-lists li.al-col__4 {
+            height: 180px;
+            text-align: center;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        .icon-lists li:hover {
+            color: #fff;
+            background: #1F4A80;
+        }
+        
+        .icon-lists li:hover .al-icon {
+            font-size: 84px;
+            transition: all .3s;
+        }
+        
+        .icon-lists .al-icon {
+            font-size: 42px;
+            line-height: 100px;
+            transition: all .3s;
+        }
+        
+        .name,
+        .fontclass {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .demo-page {
+            height: 700px;
+        }
+        
+        .demo-page .demo-page__type {
+            top: 20px;
+            left: 20px;
+            width: calc( 100% - 42px);
+            height: calc( 100% - 42px);
+            background: #f9f9f9;
+        }
+        
+        .demo-page .al-layout__header {
+            background-color: #1F4A80;
+        }
+        
+        .demo-page .al-layout__footer {
+            background-color: grey;
+        }
+        
+        [class*="al-col__"] {
+            line-height: 30px;
+            color: #fff;
+        }
+        
+        [class*="al-col__"]:nth-child(2n) {
+            background: #ccc;
+        }
+        
+        [class*="al-col__"]:nth-child(2n+1) {
+            background: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="al-align__center">前端UI规范</h1>
+    <p class="pre al-para">备注：局部规范遵循系统整体设计规范。特殊调整，注明调整原因，规范使用过程中如果出现需要调整需告知规范约定者。 <span class="al-fr">create：Alex　</span></p>
+    <div class="demo-wrap">
+
+        <div class="btn-default__wrap">
+            <div class="al-form__section al-contain">
+                <p class="al-form__title">颜色主题</p>
+                <div class="al-row al-align__center">
+                    <div class="al-col__4 al-offset-right__2 al-main__blue">蓝-主色 #1F8AE9</div>
+                    <div class="al-col__4 al-offset-right__2 al-main__black">黑-主色 #23262F</div>
+                    <div class="al-col__4 al-offset-right__2 al-main__navy">藏青-主色 #393D49</div>
+                    <div class="al-col__4 al-main__gray">灰-主色 #EEEEEE</div>
+                </div>
+                <br>
+                <br>
+                <div class="al-row al-align__center">
+                    <div class="al-col__4 al-offset-right__2 al-dark__blue">默认 #1881DF</div>
+                    <div class="al-col__4 al-offset-right__2 al-aid__warn">警告 #EFB01C</div>
+                    <div class="al-col__4 al-offset-right__2 al-aid__success">成功 #70A433</div>
+                    <div class="al-col__4 al-aid__danger">危险 #DF2626</div>
+                </div>
+                <br>
+                <br>
+                <div class="al-row al-align__center">
+                    <div class="al-col__4 al-offset-right__2 al-main__drop">灰色 #F2F2F2</div>
+                    <div class="al-col__4 al-offset-right__2 al-dark__warn">警告 #E5A714</div>
+                    <div class="al-col__4 al-offset-right__2 al-dark__success">成功 #66972D</div>
+                    <div class="al-col__4 al-dark__danger">危险 #D41E1E</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-default__wrap">
+            <div class="al-form__section al-contain">
+                <p class="al-form__title">栅格布局</p>
+
+                <div class="al-row al-align__center">
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                    <div class="al-col__1"> al-col__1 </div>
+                </div>
+                <br>
+                <br>
+                <div class="al-row al-align__center">
+                    <div class="al-col__2"> al-col__2 </div>
+                    <div class="al-col__2"> al-col__2 </div>
+                    <div class="al-col__2"> al-col__2 </div>
+                    <div class="al-col__2"> al-col__2 </div>
+                    <div class="al-col__2"> al-col__2 </div>
+                    <div class="al-col__2"> al-col__2 </div>
+                    <div class="al-col__2"> al-col__2 </div>
+                    <div class="al-col__2"> al-col__2 </div>
+                    <div class="al-col__2"> al-col__2 </div>
+                    <div class="al-col__2"> al-col__2 </div>
+                    <div class="al-col__2"> al-col__2 </div>
+                    <div class="al-col__2"> al-col__2 </div>
+                </div>
+                <br>
+                <br>
+                <div class="al-row al-align__center">
+                    <div class="al-col__3"> al-col__3 </div>
+                    <div class="al-col__3"> al-col__3 </div>
+                    <div class="al-col__3"> al-col__3 </div>
+                    <div class="al-col__3"> al-col__3 </div>
+                    <div class="al-col__3"> al-col__3 </div>
+                    <div class="al-col__3"> al-col__3 </div>
+                    <div class="al-col__3"> al-col__3 </div>
+                    <div class="al-col__3"> al-col__3 </div>
+                </div>
+                <br>
+                <br>
+                <div class="al-row al-align__center">
+                    <div class="al-col__4"> al-col__4</div>
+                    <div class="al-col__4"> al-col__4</div>
+                    <div class="al-col__4"> al-col__4</div>
+                    <div class="al-col__4"> al-col__4</div>
+                    <div class="al-col__4"> al-col__4</div>
+                    <div class="al-col__4"> al-col__4</div>
+                </div>
+                <br>
+                <br>
+                <div class="al-row al-align__center">
+                    <div class="al-col__6"> al-col__6</div>
+                    <div class="al-col__6"> al-col__6</div>
+                    <div class="al-col__6"> al-col__6</div>
+                    <div class="al-col__6"> al-col__6</div>
+                </div>
+                <br>
+                <br>
+                <div class="al-row al-align__center">
+                    <div class="al-col__8"> al-col__8</div>
+                    <div class="al-col__8"> al-col__8</div>
+                    <div class="al-col__8"> al-col__8</div>
+                </div>
+                <br>
+                <br>
+                <div class="al-row al-align__center">
+                    <div class="al-col__12"> al-col__12</div>
+                    <div class="al-col__12"> al-col__12</div>
+                </div>
+                <br>
+                <br>
+                <div class="al-row al-align__center">
+                    <div class="al-col__24"> al-col__24</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-default__wrap">
+            <div class="al-form__section demo-page">
+                <p class="al-form__title">网页排版</p>
+                <div class="al-layout__page project demo-page__type">
+                    <div class="al-layout__header">
+
+                    </div>
+                    <div class="al-layout__content">
+                        <div class="al-layout__menu">
+                            <div class="al-menu">
+                                <ul class="al-menu__group">
+                                    <li class="al-menu__item">
+                                        <p class="al-menu__title">
+                                            <i class="al-icon"></i>
+                                            <span>一级菜单-1</span>
+                                        </p>
+                                        <ul class="al-menu__group">
+                                            <li class="al-menu__item">
+                                                <p class="al-menu__title">
+                                                    <i class="al-icon"></i>
+                                                    <span>二级菜单-1-1</span>
+                                                </p>
+                                                <ul class="al-menu__group">
+                                                    <li class="al-menu__item">
+                                                        <p class="al-menu__title">
+                                                            <i class="al-icon"></i>
+                                                            <span>三级菜单-1-1-1</span>
+                                                        </p>
+                                                    </li>
+                                                    <li class="al-menu__item">
+                                                        <p class="al-menu__title">
+                                                            <i class="al-icon"></i>
+                                                            <span>三级菜单-1-1-2</span>
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="al-menu__item">
+                                                <p class="al-menu__title">
+                                                    <i class="al-icon"></i>
+                                                    <span>二级菜单-1-2</span>
+                                                </p>
+                                                <ul class="al-menu__group">
+                                                    <li class="al-menu__item">
+                                                        <p class="al-menu__title">
+                                                            <i class="al-icon"></i>
+                                                            <span>三级菜单-1-2-1</span>
+                                                        </p>
+                                                    </li>
+                                                    <li class="al-menu__item">
+                                                        <p class="al-menu__title">
+                                                            <i class="al-icon"></i>
+                                                            <span>三级菜单-1-2-2</span>
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="al-menu__item">
+                                        <p class="al-menu__title">
+                                            <i class="al-icon"></i>
+                                            <span>一级菜单-2</span>
+                                        </p>
+                                        <ul class="al-menu__group">
+                                            <li class="al-menu__item">
+                                                <p class="al-menu__title">
+                                                    <i class="al-icon"></i>
+                                                    <span>二级菜单2-1</span>
+                                                </p>
+                                            </li>
+                                            <li class="al-menu__item">
+                                                <p class="al-menu__title">
+                                                    <i class="al-icon"></i>
+                                                    <span>二级菜单2-2</span>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="al-menu__item">
+                                        <p class="al-menu__title">
+                                            <i class="al-icon"></i>
+                                            <span>一级菜单-3</span>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="al-layout__context">
+
+                        </div>
+                    </div>
+                    <div class="al-layout__footer"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-default__wrap">
+            <div class="al-form__section">
+                <p class="al-form__title">按钮主题</p>
+                <button class="al-btn al-btn__default">默认按钮</button>
+                <button class="al-btn al-btn__success">成功按钮</button>
+                <button class="al-btn al-btn__danger">错误按钮</button>
+                <button class="al-btn al-btn__warn">警告按钮</button>
+                <button class="al-btn al-btn__disabled">禁止按钮</button>
+                <button class="al-btn al-btn__outline">线框按钮</button>
+            </div>
+        </div>
+
+        <div class="btn-default__wrap">
+            <div class="al-form__section">
+                <p class="al-form__title">按钮尺寸</p>
+                <button class="al-btn al-btn__default al-btn__large">默认按钮</button>
+                <button class="al-btn al-btn__default">默认按钮</button>
+                <button class="al-btn al-btn__default al-btn__small">默认按钮</button>
+                <button class="al-btn al-btn__default al-btn__tiny">默认按钮</button>
+                <br>
+                <br>
+                <button class="al-btn al-btn__default al-btn__full">通栏按钮</button>
+            </div>
+        </div>
+
+        <div class="btn-default__wrap">
+            <div class="al-form__section">
+                <p class="al-form__title">圆角按钮</p>
+                <button class="al-btn al-btn__default al-btn__radius">默认按钮</button>
+                <button class="al-btn al-btn__success al-btn__radius">成功按钮</button>
+                <button class="al-btn al-btn__danger al-btn__radius">错误按钮</button>
+                <button class="al-btn al-btn__warn al-btn__radius">警告按钮</button>
+                <button class="al-btn al-btn__disabled al-btn__radius">禁止按钮</button>
+                <button class="al-btn al-btn__outline al-btn__radius">线框按钮</button>
+                <br>
+                <br>
+                <button class="al-btn al-btn__default al-btn__full al-btn__radius">通栏按钮</button>
+            </div>
+        </div>
+
+        <div class="btn-default__wrap">
+            <div class="al-form__section">
+                <p class="al-form__title">胶囊按钮</p>
+                <button class="al-btn al-btn__default al-btn__circle">默认按钮</button>
+                <button class="al-btn al-btn__success al-btn__circle">成功按钮</button>
+                <button class="al-btn al-btn__danger al-btn__circle">错误按钮</button>
+                <button class="al-btn al-btn__warn al-btn__circle">警告按钮</button>
+                <button class="al-btn al-btn__disabled al-btn__circle">禁止按钮</button>
+                <button class="al-btn al-btn__outline al-btn__circle">线框按钮</button>
+                <br>
+                <br>
+                <button class="al-btn al-btn__default al-btn__full al-btn__circle">通栏按钮</button>
+            </div>
+        </div>
+
+        <div class="form-default__wrap">
+            <div class="al-form__section">
+                <p class="al-form__title">表单规范</p>
+
+                <div class="al-form__item">
+                    <div class="al-input">
+                        <input type="text" class="al-input__inner" placeholder="输入框">
+                    </div>
+                </div>
+
+                <div class="al-form__item">
+                    <div class="al-input error">
+                        <input type="text" class="al-input__inner" placeholder="请正确输入">
+                        <span class="error-message">请正确输入</span>
+                    </div>
+                </div>
+
+                <div class="al-form__item">
+                    <label class="al-label">默认表单</label>
+                    <div class="al-form__group">
+                        <div class="al-input">
+                            <input type="text" class="al-input__inner" placeholder="请输入">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="al-form__item">
+                    <label class="al-label">提示表单</label>
+                    <div class="al-form__group">
+                        <div class="al-input error">
+                            <input type="text" class="al-input__inner" placeholder="请输入正确信息">
+                            <span class="error-message">请正确输入</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="al-form__item">
+                    <label class="al-label">禁用表单</label>
+                    <div class="al-form__group">
+                        <div class="al-input disabled">
+                            <input type="text" disabled class="al-input__inner" value="被禁止的内容">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="al-form__item">
+                    <label class="al-label">开关</label>
+                    <div class="al-form__group">
+                        <label class="al-switch">
+                            <input type="checkbox" hidden>
+                            <span class="al-switch__group"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="al-form__item">
+                    <label class="al-label">禁用开关</label>
+                    <div class="al-form__group">
+                        <label class="al-switch disabled">
+                            <input type="checkbox" hidden disabled>
+                            <span class="al-switch__group"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="al-form__item">
+                    <label class="al-label">复选框</label>
+                    <div class="al-form__group">
+                        <label class="al-checkbox">
+                            <input type="checkbox" hidden>
+                            <span class="al-checkbox__group"></span>
+                            <span class="al-checkbox__label">性别</span>
+                        </label>
+                        <label class="al-checkbox">
+                            <input type="checkbox" hidden>
+                            <span class="al-checkbox__group"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="al-form__item">
+                    <label class="al-label">禁用复选框</label>
+                    <div class="al-form__group">
+                        <label class="al-checkbox disabled">
+                            <input type="checkbox" hidden disabled>
+                            <span class="al-checkbox__group"></span>
+                            <span class="al-checkbox__label">性别</span>
+                        </label>
+                        <label class="al-checkbox disabled">
+                            <input type="checkbox" checked="checked" hidden disabled>
+                            <span class="al-checkbox__group"></span>
+                            <span class="al-checkbox__label">性别</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="al-form__item">
+                    <label class="al-label">单选框</label>
+                    <div class="al-form__group">
+                        <label class="al-radio">
+                            <input type="radio" name="gender" hidden>
+                            <span class="al-radio__group"></span>
+                            <span class="al-radio__label">男</span>
+                        </label>
+                        <label class="al-radio">
+                            <input type="radio" name="gender" hidden>
+                            <span class="al-radio__group"></span>
+                            <span class="al-radio__label">女</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="al-form__item">
+                    <label class="al-label">禁止单选框</label>
+                    <div class="al-form__group">
+                        <label class="al-radio disabled">
+                            <input type="radio" hidden disabled>
+                            <span class="al-radio__group"></span>
+                            <span class="al-radio__label">不可选</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="al-form__item">
+                    <label class="al-label">下拉框</label>
+                    <div class="al-form__group">
+
+                        <!-- 添加 active 类名 显示下拉框 -->
+                        <div class="al-select">
+                            <div class="al-select__input">
+                                <p class="al-select__text"></p>
+                                <input type="text" class="al-select__val" hidden>
+                            </div>
+                            <ol class="al-select__main">
+                                <li al-value="请选择">请选择</li>
+                                <li al-value="1">A</li>
+                                <li al-value="2">B</li>
+                                <li al-value="3">C</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="al-form__item">
+                    <label class="al-label">多选下拉框</label>
+                    <div class="al-form__group">
+
+                        <!-- 添加 active 类名 显示下拉框 ; 多选类名 multiple-->
+                        <div class="al-select multiple">
+                            <div class="al-select__input">
+                                <p class="al-select__text"></p>
+                                <input type="text" class="al-select__val" hidden>
+                            </div>
+                            <ol class="al-select__main">
+                                <li al-value="请选择">请选择</li>
+                                <li al-value="1">A</li>
+                                <li al-value="2">B</li>
+                                <li al-value="3">C</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="al-form__item">
+                    <label class="al-label">禁用下拉框</label>
+                    <div class="al-form__group">
+
+                        <!-- 添加 disabled 类名 禁止下拉框 -->
+                        <div class="al-select disabled">
+                            <div class="al-select__input">
+                                <p class="al-select__text"></p>
+                                <input type="text" class="al-select__val" hidden>
+                            </div>
+                            <ol class="al-select__main">
+                                <li al-value="请选择">请选择</li>
+                                <li al-value="1">A</li>
+                                <li al-value="2">B</li>
+                                <li al-value="3">C</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="al-form__item">
+                    <div class="al-form__group">
+                        <button class="al-btn al-btn__default">默认按钮</button>
+                        <button class="al-btn al-btn__disabled" disabled>禁止提交</button>
+                        <button class="al-btn al-btn__outline">重置</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-default__wrap">
+            <div class="al-form__section">
+                <p class="al-form__title">弹出层</p>
+                <div class="al-form__group">
+                    <button class="al-btn al-btn__default" id="showDialog1">迷你</button>
+                    <button class="al-btn al-btn__default" id="showDialog2">默认</button>
+                    <button class="al-btn al-btn__default" id="showDialog3">巨大</button>
+                    <button class="al-btn al-btn__default" id="showDialog4">全屏</button>
+                </div>
+
+                <div class="al-dialog al-hide">
+                    <div class="al-context__header">
+                        <span>标题</span>
+                        <i class="al-icon al-icon__close"></i>
+                    </div>
+                    <div class="al-context__content"></div>
+                    <div class="al-context__footer">
+                        <button class="al-btn al-btn__default al-btn__close">确定</button>
+                        <button class="al-btn al-btn__outline">重置</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-default__wrap">
+            <div class="al-form__section">
+                <p class="al-form__title">提示框</p>
+                <div class="al-form__group">
+                    <button class="al-btn al-btn__success" id="showMessage1">成功</button>
+                    <button class="al-btn al-btn__danger" id="showMessage2">失败</button>
+                    <button class="al-btn al-btn__warn" id="showMessage3">警告</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-default__wrap">
+            <div class="al-form__section">
+                <p class="al-form__title">Tab切换</p>
+                <p>默认风格</p>
+                <div class="al-tab">
+                    <div class="al-table__wrap">
+                        <span class="al-tab__pane active">第一</span>
+                        <span class="al-tab__pane">第二</span>
+                        <span class="al-tab__pane">第三</span>
+                    </div>
+                </div>
+                <br>
+                <p>卡片风格</p>
+                <div class="al-tab al-tab-type__card">
+                    <div class="al-table__wrap">
+                        <span class="al-tab__pane active">第一</span>
+                        <span class="al-tab__pane">第二</span>
+                        <span class="al-tab__pane">第三</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-default__wrap">
+            <div class="al-form__section">
+                <p class="al-form__title">表格</p>
+                <div class="al-table">
+                    <table>
+                        <thead class="al-table__header">
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th>年龄</th>
+                            <th>联系方法</th>
+                            <th>E-mail</th>
+                            <th>操作</th>
+                        </thead>
+                        <tbody class="al-table__body">
+                            <tr>
+                                <td>雨化田</td>
+                                <td>男</td>
+                                <td>24</td>
+                                <td>18112232002</td>
+                                <td>fineRain@gmail.com</td>
+                                <td>
+                                    <button class="al-btn al-btn__tiny al-btn__outline">查看</button>
+                                    <button class="al-btn al-btn__tiny al-btn__default">编辑</button>
+                                    <button class="al-btn al-btn__tiny al-btn__warn">删除</button>
+                                    <button class="al-btn al-btn__tiny al-btn__default">绑定</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>雨化田</td>
+                                <td>男</td>
+                                <td>24</td>
+                                <td>18112232002</td>
+                                <td>fineRain@gmail.com</td>
+                                <td>
+                                    <button class="al-btn al-btn__tiny al-btn__outline">查看</button>
+                                    <button class="al-btn al-btn__tiny al-btn__default">编辑</button>
+                                    <button class="al-btn al-btn__tiny al-btn__warn">删除</button>
+                                    <button class="al-btn al-btn__tiny al-btn__default">绑定</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>雨化田</td>
+                                <td>男</td>
+                                <td>24</td>
+                                <td>18112232002</td>
+                                <td>fineRain@gmail.com</td>
+                                <td>
+                                    <button class="al-btn al-btn__tiny al-btn__outline">查看</button>
+                                    <button class="al-btn al-btn__tiny al-btn__default">编辑</button>
+                                    <button class="al-btn al-btn__tiny al-btn__warn">删除</button>
+                                    <button class="al-btn al-btn__tiny al-btn__default">绑定</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>雨化田</td>
+                                <td>男</td>
+                                <td>24</td>
+                                <td>18112232002</td>
+                                <td>fineRain@gmail.com</td>
+                                <td>
+                                    <button class="al-btn al-btn__tiny al-btn__outline">查看</button>
+                                    <button class="al-btn al-btn__tiny al-btn__default">编辑</button>
+                                    <button class="al-btn al-btn__tiny al-btn__warn">删除</button>
+                                    <button class="al-btn al-btn__tiny al-btn__default">绑定</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>雨化田</td>
+                                <td>男</td>
+                                <td>24</td>
+                                <td>18112232002</td>
+                                <td>fineRain@gmail.com</td>
+                                <td>
+                                    <button class="al-btn al-btn__tiny al-btn__outline">查看</button>
+                                    <button class="al-btn al-btn__tiny al-btn__default">编辑</button>
+                                    <button class="al-btn al-btn__tiny al-btn__warn">删除</button>
+                                    <button class="al-btn al-btn__tiny al-btn__default">绑定</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-default__wrap">
+            <div class="al-form__section">
+                <p class="al-form__title">图标按钮</p>
+                <div class="al-form__group">
+                    <button class="al-btn al-btn__outline al-btn-type__icon"><i class="al-icon al-icon__editor"></i></button>
+                    <button class="al-btn al-btn__outline al-btn-type__icon"><i class="al-icon al-icon__search"></i></button>
+                    <button class="al-btn al-btn__outline al-btn-type__icon"><i class="al-icon al-icon__refresh"></i></button>
+                    <button class="al-btn al-btn__outline al-btn-type__icon"><i class="al-icon al-icon__trash"></i></button>
+                    <button class="al-btn al-btn__outline al-btn-type__icon"><i class="al-icon al-icon__add"></i></button>
+                    <button class="al-btn al-btn__outline al-btn-type__icon"><i class="al-icon al-icon__close"></i></button>
+                    <button class="al-btn al-btn__outline al-btn-type__icon"><i class="al-icon al-icon__return"></i></button>
+                    <button class="al-btn al-btn__outline al-btn-type__icon"><i class="al-icon al-icon__enter"></i></button>
+                    <button class="al-btn al-btn__outline al-btn-type__icon"><i class="al-icon al-icon__packup"></i></button>
+                    <button class="al-btn al-btn__outline al-btn-type__icon"><i class="al-icon al-icon__unfold"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-default__wrap">
+            <div class="al-form__section">
+                <p class="al-form__title">导航</p>
+                <div class="al-form__group al-clearfix">
+                    <div class="al-menu">
+                        <ul class="al-menu__group">
+                            <li class="al-menu__item">
+                                <p class="al-menu__title">
+                                    <i class="al-icon"></i>
+                                    <span>一级菜单-1</span>
+                                </p>
+                                <ul class="al-menu__group">
+                                    <li class="al-menu__item">
+                                        <p class="al-menu__title">
+                                            <i class="al-icon"></i>
+                                            <span>二级菜单-1-1</span>
+                                        </p>
+                                        <ul class="al-menu__group">
+                                            <li class="al-menu__item">
+                                                <p class="al-menu__title">
+                                                    <i class="al-icon"></i>
+                                                    <span>三级菜单-1-1-1</span>
+                                                </p>
+                                            </li>
+                                            <li class="al-menu__item">
+                                                <p class="al-menu__title">
+                                                    <i class="al-icon"></i>
+                                                    <span>三级菜单-1-1-2</span>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="al-menu__item">
+                                        <p class="al-menu__title">
+                                            <i class="al-icon"></i>
+                                            <span>二级菜单-1-2</span>
+                                        </p>
+                                        <ul class="al-menu__group">
+                                            <li class="al-menu__item">
+                                                <p class="al-menu__title">
+                                                    <i class="al-icon"></i>
+                                                    <span>三级菜单-1-2-1</span>
+                                                </p>
+                                            </li>
+                                            <li class="al-menu__item">
+                                                <p class="al-menu__title">
+                                                    <i class="al-icon"></i>
+                                                    <span>三级菜单-1-2-2</span>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="al-menu__item">
+                                <p class="al-menu__title">
+                                    <i class="al-icon"></i>
+                                    <span>一级菜单-2</span>
+                                </p>
+                                <ul class="al-menu__group">
+                                    <li class="al-menu__item">
+                                        <p class="al-menu__title">
+                                            <i class="al-icon"></i>
+                                            <span>二级菜单2-1</span>
+                                        </p>
+                                    </li>
+                                    <li class="al-menu__item">
+                                        <p class="al-menu__title">
+                                            <i class="al-icon"></i>
+                                            <span>二级菜单2-2</span>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="al-menu__item">
+                                <p class="al-menu__title">
+                                    <i class="al-icon"></i>
+                                    <span>一级菜单-3</span>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="btn-default__wrap">
+            <div class="al-form__section">
+                <p class="al-form__title">字体图标</p>
+                <div class="al-clearfix">
+                    <ul class="icon-lists al-row">
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__activity"></i>
+                            <div class="name">日历、便签</div>
+                            <div class="fontclass">.al-icon__activity</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__brush"></i>
+                            <div class="name">编辑、记录</div>
+                            <div class="fontclass">.al-icon__brush</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__editor"></i>
+                            <div class="name">修改、编辑</div>
+                            <div class="fontclass">.al-icon__editor</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__label"></i>
+                            <div class="name">标记</div>
+                            <div class="fontclass">.al-icon__label</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__lock"></i>
+                            <div class="name">锁定</div>
+                            <div class="fontclass">.al-icon__lock</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__refresh"></i>
+                            <div class="name">刷新</div>
+                            <div class="fontclass">.al-icon__refresh</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__setup"></i>
+                            <div class="name">设置</div>
+                            <div class="fontclass">.al-icon__setup</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__prompt"></i>
+                            <div class="name">警告</div>
+                            <div class="fontclass">.al-icon__prompt</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__warning"></i>
+                            <div class="name">警告、提示</div>
+                            <div class="fontclass">.al-icon__warning</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__success"></i>
+                            <div class="name">成功</div>
+                            <div class="fontclass">.al-icon__success</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__time"></i>
+                            <div class="name">时间、等待</div>
+                            <div class="fontclass">.al-icon__time</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__trash"></i>
+                            <div class="name">删除、移除</div>
+                            <div class="fontclass">.al-icon__trash</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__delete"></i>
+                            <div class="name">删除、失败</div>
+                            <div class="fontclass">.al-icon__delete</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__search"></i>
+                            <div class="name">搜索、查看</div>
+                            <div class="fontclass">.al-icon__search</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__add"></i>
+                            <div class="name">添加、新增</div>
+                            <div class="fontclass">.al-icon__add</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__close"></i>
+                            <div class="name">关闭</div>
+                            <div class="fontclass">.al-icon__close</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__return"></i>
+                            <div class="name">上一个</div>
+                            <div class="fontclass">.al-icon__return</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__enter"></i>
+                            <div class="name">下一个</div>
+                            <div class="fontclass">.al-icon__enter</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__packup"></i>
+                            <div class="name">向上</div>
+                            <div class="fontclass">.al-icon__packup</div>
+                        </li>
+
+                        <li class="al-col__4">
+                            <i class="al-icon iconfont al-icon__unfold"></i>
+                            <div class="name">向下</div>
+                            <div class="fontclass">.al-icon__unfold</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/avalon.plugins.js"></script>
+    <script>
+        (function(window, doc) {
+
+            /**
+             * page scripts start
+             */
+
+            avalonUtils.init($);
+
+            var showSuccessMsg = $('#showMessage1'),
+                showErrorMsg = $('#showMessage2'),
+                showWarnMsg = $('#showMessage3'),
+                showTinyDialog = $('#showDialog1'),
+                showSmallDialog = $('#showDialog2'),
+                showlargeDialog = $('#showDialog3'),
+                showFullDialog = $('#showDialog4'),
+                dialogBox = $('.al-dialog')[0];
+
+            showSuccessMsg.on('click', function() {
+                avalonUtils.alCreateMsgBox({
+                    type: 'success'
+                });
+            })
+
+            showErrorMsg.on('click', function() {
+                avalonUtils.alCreateMsgBox({
+                    type: 'error'
+                });
+            })
+
+            showWarnMsg.on('click', function() {
+                avalonUtils.alCreateMsgBox({
+                    type: 'warn'
+                });
+            })
+
+            showTinyDialog.on('click', function() {
+                avalonUtils.showDialog(dialogBox);
+                dialogBox.className = 'al-dialog al-dialog__tiny';
+            })
+
+            showSmallDialog.on('click', function() {
+                avalonUtils.showDialog(dialogBox);
+                dialogBox.className = 'al-dialog al-dialog__small';
+            })
+
+            showlargeDialog.on('click', function() {
+                avalonUtils.showDialog(dialogBox);
+                dialogBox.className = 'al-dialog al-dialog__large';
+            })
+
+            showFullDialog.on('click', function() {
+                avalonUtils.showDialog(dialogBox);
+                dialogBox.className = 'al-dialog al-dialog__full';
+            })
+
+            /**
+             * page scripts end
+             */
+        })(window, document)
+    </script>
+</body>
+
+</html>

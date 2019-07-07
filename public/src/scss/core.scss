@@ -1,0 +1,126 @@
+// 元素浮动
+.al-fl {
+    float: left;
+}
+
+.al-fr {
+    float: right;
+}
+
+.al-clearfix {
+    &::before {
+        content: '';
+        display: table;
+    }
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+        visibility: hidden;
+    }
+}
+
+// 元素定位
+.al-abs {
+    position: absolute;
+}
+
+.al-rel {
+    position: relative;
+}
+
+.al-fixed {
+    position: fixed;
+}
+
+// 元素居中
+.al-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+// 定位居中
+.al-center__level {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.al-center__vertical {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.al-center__just {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 文本居中
+.al-align__center {
+    text-align: center;
+}
+
+.al-align__left {
+    text-align: left;
+}
+
+.al-align__right {
+    text-align: right;
+}
+
+.al-indent {
+    text-indent: 2em;
+}
+
+.al-ellipsis {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+// 段落对齐
+.al-para {
+    text-align: justify;
+    line-height: 1.5;
+}
+
+// 图片居中
+.al-img_just {
+    text-align: center;
+    &::after {
+        content: '';
+        vertical-align: middle;
+    }
+    img {
+        width: auto;
+        vertical-align: middle;
+    }
+}
+
+// 显示模式
+.al-block {
+    display: block;
+}
+
+.al-inline__block {
+    display: inline-block;
+}
+
+// 显示隐藏
+.al-show {
+    display: block !important;
+}
+
+.al-hide {
+    display: none !important;
+}
+
+// 伸缩元素
+.al-flex__wrap {
+    display: flex;
+    .al-flex__item {
+        align-items: center;
+        justify-content: space-between;
+    }
+}

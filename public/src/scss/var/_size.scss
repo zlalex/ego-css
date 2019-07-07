@@ -1,0 +1,58 @@
+$font-family        :  arial, "Hiragino Sans GB", "Microsoft Yahei", 微软雅黑, 宋体, Tahoma, Arial, Helvetica, STHeiti, PingFang SC;
+$font-default__size :    14px;
+
+$h1-size    :   24px;
+$h2-size    :   18px;
+$h3-size    :   16px;
+$h4-size    :   14px;
+$h5-size    :   12px;
+
+
+$btn-default__size      :       $font-default__size ;
+$btn-default__height    :       30px;
+
+$btn-small__size        :       12px;
+$btn-small__height      :       26px;
+
+$btn-tiny__size         :       $btn-small__size;
+$btn-tiny__height       :       22px;
+
+$btn-large__size        :       16px;
+$btn-large__height      :       40px;
+
+$btn-full__size         :       $btn-large__size;
+$btn-full__height       :       $btn-large__height;
+$btn-full__width        :       100%;
+
+$switch-width           :   54px;
+$switch-height          :   24px;
+$switch-dot__size       :   16px;
+
+$checkbox-size          :   18px;
+$radio-size             :   20px;
+$radio-dot__size        :   8px;
+
+$select-height          :   200px;
+
+$padding-both           :   10px;
+$default-min__width     :   100px;
+$default-min__height    :   30px;
+
+$dialog-min__width      :   272px;
+$dialog-min__height     :   150px;
+$message-min__height    :   130px;
+$message-title__height  :   35px;
+
+$dialog-tiny__width     :   $dialog-min__width;
+$dialog-small__width    :   544px;
+$dialog-large__width    :   816px;
+$dialog-full__width     :   100%;
+
+$menu-min__width        :   180px;
+$menu-title__indent     :   20px;
+
+$website-type__page         : 1200px;
+$website-head__height       : 70px;
+$website-footer__height     : 52px;
+$project-head__height       : 50px;
+$project-footer__height     : 30px;

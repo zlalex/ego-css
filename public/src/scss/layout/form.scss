@@ -1,0 +1,317 @@
+@import "../var/var.scss";
+@import "../lib/mixin.scss";
+
+.al-form__section{
+    position: relative;
+    padding: $padding-both * 2 ;
+    @include border($e6);
+    .al-form__title{
+        position: absolute;
+        top: -1em;
+        left: 2em;
+        padding: 0 1em;
+        line-height: 2;
+        background-color: $gf;
+    }
+}
+
+.al-form__item{
+    margin: 20px 0;
+    min-width: $default-min__width * 2;
+    min-height: $default-min__height;
+    .al-form__group{
+        margin-left: $default-min__width;
+        min-width: $default-min__width;
+    }
+}
+
+.al-label{
+    float: left;
+    width: $default-min__width;
+    height: $default-min__height;
+    padding: 0 $padding-both;
+    font-size: $font-default__size;
+    line-height: $default-min__height;
+    text-align: right;
+}
+
+.al-input{
+    &.al-input__large{
+        .al-input__inner{
+            height: $btn-large__height;
+            line-height: $btn-large__height - 2px;
+        }
+    }
+    .al-input__inner{
+        width: 100%;
+        height: $default-min__height;
+        padding-left: 1em;
+        line-height: $default-min__height - 2px;
+        @include border($e6);
+        outline: none;
+        &:hover{
+            border-color: $cd;
+        }
+        &:focus:not([readonly]){
+            border-color: $main-blue;
+        }
+    }
+    .error-message{
+        display: none;
+    }
+    &.error {
+        position: relative;
+        .al-input__inner{
+            border-color: $main-danger;
+        }
+        .error-message{
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            display: block;
+            font-size: 12px;
+            line-height: 1;
+            color: $main-danger;
+        }
+    }
+    &.disabled,
+    .al-input__inner[disabled]{
+        color: $ae;
+        border-color: $cd;
+        background-color: $f2;
+        cursor: not-allowed;
+    }
+}
+
+.al-switch{
+    position: relative;
+    top: 3px;
+    &.disabled{
+        .al-switch__group{
+            background-color: $f1;
+        }
+    }
+    .al-switch__group{
+        display: block;
+        width: $switch-width;
+        height: $switch-height;
+        border-radius: $switch-height;
+        @include border($cd);
+        &::before{
+            content: "";
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: $switch-dot__size;
+            height: $switch-dot__size;
+            background-color: $d2;
+            border-radius: 50%;
+            transition: all 0.25s;
+        }
+        &::after{
+            content: "OFF";
+            position: absolute;
+            right: 6px;
+            color: $g9;
+            font-size: 12px;
+            line-height: $switch-height - 2px;
+        }
+    }
+    input[type="checkbox"]:checked + .al-switch__group{
+        border-color: $main-blue;
+        background-color: $main-blue;
+        &::before{
+            content: "";
+            left: 34px;
+            transition: all 0.25s;
+            background-color: $gf;
+        }
+        &::after{
+            content: "ON";
+            color: $gf;
+            right: 26px;
+        }
+    }
+}
+
+.al-checkbox{
+    .al-checkbox__group{
+        position: relative;
+        top: 6px;
+        float: left;
+        width: $checkbox-size;
+        height: $checkbox-size;
+        @include border($cd);
+        &::before{
+            content: "";
+            position: absolute;
+            left: 5px;
+            bottom: 3px;
+            width: 8px;
+            height: 14px;
+            border: 0 none;
+            transform: rotateZ(45deg);
+            transition: all 0.25s;
+        }
+        &:hover{
+            border-color: $main-blue;
+        }
+
+    }
+    &.disabled{
+        .al-checkbox__group{
+            background-color: $f1;
+            &:hover{
+                border-color: $cd;
+            }
+        }
+        input[type="checkbox"]:checked + .al-checkbox__group{
+            border-color: $d2;
+            background-color: $d2;
+        }
+    }
+    .al-checkbox__label{
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+    input[type="checkbox"]:checked + .al-checkbox__group{
+        border-color: $main-blue;
+        background-color: $main-blue;
+        &::before{
+            content: "";
+            border-bottom: 2px solid $gf;
+            border-right: 2px solid $gf;
+            transition: all 0.25s;
+        }
+    }
+}
+
+.al-radio{
+    .al-radio__label{
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+    &.disabled{
+        .al-radio__group{
+            background-color: $f1;
+        }
+    }
+    .al-radio__group{
+        position: relative;
+        top: 5px;
+        float: left;
+        width: $radio-size;
+        height: $radio-size;
+        border-radius: 50%;
+        @include border($cd);
+        &::before{
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: $radio-dot__size;
+            height: $radio-dot__size;
+            border-radius: 50%;
+            background-color: transparent;
+            transition: all 0.25s;
+        }
+    }
+    input[type="radio"]:checked + .al-radio__group{
+        border-color: $main-blue;
+        &::before{
+            content: "";
+            background-color: $main-blue;
+            transition: all 0.25s;
+        }
+    }
+}
+
+.al-select{
+    position: relative;
+    cursor: pointer;
+    .al-select__text{
+        width: 100%;
+        height: $default-min__height;
+        padding-left: 1em;
+        line-height: $default-min__height - 2px;
+        @include border($e6);
+    }
+    .al-select__input{
+        position: relative;
+        &:after{
+            content: "";
+            position: absolute;
+            top: 11px;
+            right: 11px;
+            width: 12px;
+            height: 12px;
+            border-top: 6px solid $cd;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            transition: all .5s;
+        }
+    }
+    &.active{
+        .al-select__main{
+            display: block;
+            top: 40px;
+            transition: all .5s;
+        }
+        .al-select__input{
+            &:after{
+                content: "";
+                transform: rotateZ(180deg);
+                transform-origin: 6px 3px;
+                transition: all .5s;
+            }
+        }
+    }
+    &.disabled{
+        cursor: not-allowed;
+        .al-select__text{
+            background-color: $f2;
+        }
+        .al-select__main{
+            display: none !important;
+        }
+    }
+}
+
+.al-select__main{
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    display: none;
+    width: 100%;
+    max-height: $select-height + 2px;
+    line-height: $default-min__height;
+    background-color: $gf;
+    @include border($cd);
+    @include shadow($f2);
+    li{
+        text-indent: 1em;
+        &:hover{
+            background-color: $f8;
+        }
+        &.active{
+            color: $gf;
+            background-color: $main-blue;
+        }
+        &:first-child{
+            color: $g9;
+        }
+    }
+}
+
+.al-switch,
+.al-checkbox,
+.al-radio{
+    float: left;
+    line-height: $default-min__height;
+    cursor: pointer;
+    &.disabled{
+        cursor: not-allowed;
+    }
+}

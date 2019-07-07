@@ -1,0 +1,33 @@
+@mixin border ($color, $style:solid, $width:1px){
+    border-width: $width;
+    border-style: $style;
+    border-color: $color;
+}
+
+@mixin shadow($color, $size:4px){
+    box-shadow: 0 0 $size $color;
+}
+
+@mixin clearfix () {
+    &::before{
+        content: "";
+        display: table;
+    }
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin abs () {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@mixin pos-center ($y1:50%, $x1:50%, $y2:-50%, $x2:-50%) {
+    top: $y1;
+    left: $x1;
+    transform: translate($x2, $y2);
+}

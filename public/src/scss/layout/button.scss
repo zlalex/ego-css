@@ -1,0 +1,146 @@
+@import "../var/var.scss";
+@import "../lib/mixin.scss";
+
+.al-btn{
+    display: inline-block;
+    height: $btn-default__height;
+    padding: 0 10px;
+    margin: 0 5px 5px 0;
+    color: $gf;
+    font-size: $btn-default__size;
+    font-family: $font-family;
+    line-height: $btn-default__height;
+    text-align: center;
+    vertical-align: bottom;
+    white-space: nowrap;
+    @include border(transparent);
+    border-radius: 0px;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    &.al-btn-type__icon{
+        padding: 0 6px;
+        .al-icon{
+            font-weight: 700;
+        }
+        &:hover{
+            background-color: $main-blue;
+            color: $gf;
+        }
+        &:active{
+            background-color: $dark-blue !important;
+            color: $gf;
+        }
+    }
+    /* button style */
+    &.al-btn__default{
+        background-color: $main-blue ;
+        &:hover{
+            background-color: $aid-blue;
+        }
+        &:active{
+            background-color: $dark-blue;
+        }
+    }
+
+    &.al-btn__danger{
+        background-color: $main-danger;
+        &:hover{
+            background-color: $aid-danger;
+        }
+        &:active{
+            background-color: $dark-danger;
+        }
+    }
+
+    &.al-btn__warn{
+        background-color: $main-warn;
+        &:hover{
+            background-color: $aid-warn;
+        }
+        &:active{
+            background-color: $dark-warn;
+        }
+    }
+
+    &.al-btn__success{
+        background-color: $main-success;
+        &:hover{
+            background-color: $aid-success;
+        }
+        &:active{
+            background-color: $dark-success;
+        }
+    }
+
+    &.al-btn__disabled,
+    &.al-btn__outline{
+        color: $ae;
+        line-height: $btn-default__height - 2px;
+        border-color: $cd;
+        background-color: $f1;
+        &.al-btn__tiny{
+            line-height: $btn-tiny__height - 2px;
+        }
+        &.al-btn__small{
+            line-height: $btn-small__height - 2px;
+        }
+        &.al-btn__large{
+            line-height: $btn-large__height - 2px;
+        }
+        &.al-btn__full{
+            line-height: $btn-full__height - 2px;
+        }
+    }
+
+    &.al-btn__disabled,
+    &[disabled]{
+        cursor: not-allowed;
+    }
+    &.al-btn__outline{
+        color: $g40;
+        background-color: transparent;
+        &:hover{
+            border-color: $main-blue;
+        }
+        &:active{
+            border-color: $dark-blue;
+            background-color: $f9;
+        }
+    }
+
+    /* button size */
+    &.al-btn__tiny{
+        padding: 0 5px;
+        height: $btn-tiny__height;
+        font-size: $btn-tiny__size;
+        line-height: $btn-tiny__height;
+    }
+
+    &.al-btn__small{
+        height: $btn-small__height;
+        font-size: $btn-small__size;
+        line-height: $btn-small__height;
+    }
+
+    &.al-btn__large{
+        height: $btn-large__height;
+        font-size: $btn-large__size;
+        line-height: $btn-large__height;
+    }
+
+    &.al-btn__full{
+        width: 100%;
+        height: $btn-full__height;
+        font-size: $btn-full__size;
+        line-height: $btn-full__height;
+    }
+
+    &.al-btn__radius{
+        border-radius: 5px;
+    }
+
+    &.al-btn__circle{
+        border-radius: 40px;
+    }
+}

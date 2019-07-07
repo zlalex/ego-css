@@ -1,0 +1,50 @@
+@import "color.scss";
+
+.al-main__blue{
+    background-color: $main-blue !important;
+}
+.al-dark__blue{
+    background-color: $dark-blue !important;
+}
+.al-main__black{
+    background-color: $main-black !important;
+}
+.al-main__navy{
+    background-color: $main-navy !important;
+}
+.al-main__gray{
+    background-color: $main-gray !important;
+}
+
+.al-main__warn{
+    background-color: $main-warn !important;
+}
+.al-main__success{
+    background-color: $main-success !important;
+}
+.al-main__danger{
+    background-color: $main-danger !important;
+}
+.al-main__drop{
+    background-color: $main-drop !important;
+}
+
+.al-aid__warn{
+    background-color: $aid-warn !important;
+}
+.al-aid__success{
+    background-color: $aid-success !important;
+}
+.al-aid__danger{
+    background-color: $aid-danger !important;
+}
+
+.al-dark__warn{
+    background-color: $dark-warn !important;
+}
+.al-dark__success{
+    background-color: $dark-success !important;
+}
+.al-dark__danger{
+    background-color: $dark-danger !important;
+}

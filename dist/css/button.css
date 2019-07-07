@@ -1,0 +1,101 @@
+@charset "UTF-8";
+.al-btn {
+  display: inline-block;
+  height: 30px;
+  padding: 0 10px;
+  margin: 0 5px 5px 0;
+  color: #fff;
+  font-size: 14px;
+  font-family: arial, "Hiragino Sans GB", "Microsoft Yahei", 微软雅黑, 宋体, Tahoma, Arial, Helvetica, STHeiti, PingFang SC;
+  line-height: 30px;
+  text-align: center;
+  vertical-align: bottom;
+  white-space: nowrap;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 0px;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  /* button style */
+  /* button size */ }
+  .al-btn.al-btn-type__icon {
+    padding: 0 6px; }
+    .al-btn.al-btn-type__icon .al-icon {
+      font-weight: 700; }
+    .al-btn.al-btn-type__icon:hover {
+      background-color: #1f8ae9;
+      color: #fff; }
+    .al-btn.al-btn-type__icon:active {
+      background-color: #0d77d5 !important;
+      color: #fff; }
+  .al-btn.al-btn__default {
+    background-color: #1f8ae9; }
+    .al-btn.al-btn__default:hover {
+      background-color: #1881df; }
+    .al-btn.al-btn__default:active {
+      background-color: #0d77d5; }
+  .al-btn.al-btn__danger {
+    background-color: #e93535; }
+    .al-btn.al-btn__danger:hover {
+      background-color: #df2626; }
+    .al-btn.al-btn__danger:active {
+      background-color: #d41e1e; }
+  .al-btn.al-btn__warn {
+    background-color: #f7ba2a; }
+    .al-btn.al-btn__warn:hover {
+      background-color: #efb01c; }
+    .al-btn.al-btn__warn:active {
+      background-color: #e5a714; }
+  .al-btn.al-btn__success {
+    background-color: #7aad3e; }
+    .al-btn.al-btn__success:hover {
+      background-color: #70a433; }
+    .al-btn.al-btn__success:active {
+      background-color: #66972d; }
+  .al-btn.al-btn__disabled, .al-btn.al-btn__outline {
+    color: #aeaeae;
+    line-height: 28px;
+    border-color: #cdcdcd;
+    background-color: #f1f1f1; }
+    .al-btn.al-btn__disabled.al-btn__tiny, .al-btn.al-btn__outline.al-btn__tiny {
+      line-height: 20px; }
+    .al-btn.al-btn__disabled.al-btn__small, .al-btn.al-btn__outline.al-btn__small {
+      line-height: 24px; }
+    .al-btn.al-btn__disabled.al-btn__large, .al-btn.al-btn__outline.al-btn__large {
+      line-height: 38px; }
+    .al-btn.al-btn__disabled.al-btn__full, .al-btn.al-btn__outline.al-btn__full {
+      line-height: 38px; }
+  .al-btn.al-btn__disabled, .al-btn[disabled] {
+    cursor: not-allowed; }
+  .al-btn.al-btn__outline {
+    color: #404040;
+    background-color: transparent; }
+    .al-btn.al-btn__outline:hover {
+      border-color: #1f8ae9; }
+    .al-btn.al-btn__outline:active {
+      border-color: #0d77d5;
+      background-color: #f9f9f9; }
+  .al-btn.al-btn__tiny {
+    padding: 0 5px;
+    height: 22px;
+    font-size: 12px;
+    line-height: 22px; }
+  .al-btn.al-btn__small {
+    height: 26px;
+    font-size: 12px;
+    line-height: 26px; }
+  .al-btn.al-btn__large {
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px; }
+  .al-btn.al-btn__full {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px; }
+  .al-btn.al-btn__radius {
+    border-radius: 5px; }
+  .al-btn.al-btn__circle {
+    border-radius: 40px; }

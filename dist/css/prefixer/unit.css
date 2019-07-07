@@ -1,0 +1,208 @@
+.al-dialog,
+.al-message {
+  position: fixed;
+  z-index: 10;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  min-width: 272px;
+  background-color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e6e6e6;
+  -webkit-box-shadow: 0 0 4px #f2f2f2;
+          box-shadow: 0 0 4px #f2f2f2; }
+  .al-dialog .al-context__header,
+  .al-message .al-context__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 35px;
+    padding: 0 10px;
+    line-height: 35px;
+    background-color: #f8f8f8; }
+    .al-dialog .al-context__header .al-icon,
+    .al-message .al-context__header .al-icon {
+      position: absolute;
+      right: 10px;
+      cursor: pointer;
+      -webkit-transition: all .5s;
+      transition: all .5s; }
+      .al-dialog .al-context__header .al-icon:hover,
+      .al-message .al-context__header .al-icon:hover {
+        -webkit-transform: rotateZ(270deg);
+                transform: rotateZ(270deg);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        -webkit-transition: all .5s;
+        transition: all .5s; }
+  .al-dialog .al-context__content,
+  .al-message .al-context__content {
+    padding: 35px 10px 50px; }
+    .al-dialog .al-context__content .al-icon,
+    .al-message .al-context__content .al-icon {
+      float: left;
+      font-size: 34px; }
+    .al-dialog .al-context__content .al-icon__warning,
+    .al-message .al-context__content .al-icon__warning {
+      color: #f7ba2a; }
+    .al-dialog .al-context__content .al-icon__success,
+    .al-message .al-context__content .al-icon__success {
+      color: #7aad3e; }
+    .al-dialog .al-context__content .al-icon__delete,
+    .al-message .al-context__content .al-icon__delete {
+      color: #e93535; }
+    .al-dialog .al-context__content p,
+    .al-message .al-context__content p {
+      margin-top: 15px;
+      height: 30px;
+      line-height: 30px;
+      white-space: nowrap; }
+  .al-dialog .al-context__footer,
+  .al-message .al-context__footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0 5px;
+    text-align: center; }
+
+.al-dialog {
+  min-height: 150px; }
+  .al-dialog.al-dialog__tiny {
+    width: 272px; }
+  .al-dialog.al-dialog__small {
+    width: 544px; }
+  .al-dialog.al-dialog__large {
+    width: 816px; }
+  .al-dialog.al-dialog__full {
+    top: 0;
+    width: 100%;
+    height: 100%; }
+
+.al-message {
+  min-height: 130px; }
+
+.al-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .3; }
+
+.al-tab .al-table__wrap {
+  border-bottom: 1px solid #e6e6e6; }
+  .al-tab .al-table__wrap::before {
+    content: "";
+    display: table; }
+  .al-tab .al-table__wrap::after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.al-tab .al-tab__pane {
+  position: relative;
+  bottom: -1px;
+  float: left;
+  padding: 0 20px;
+  line-height: 30px;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent; }
+  .al-tab .al-tab__pane.active {
+    color: #1f8ae9;
+    border-color: #e6e6e6;
+    border-bottom-color: #fff; }
+    .al-tab .al-tab__pane.active::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      top: -1px;
+      left: 0;
+      height: 2px;
+      background-color: #1f8ae9; }
+
+.al-tab.al-tab-type__card {
+  background-color: #f9f9f9;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e6e6e6; }
+  .al-tab.al-tab-type__card .al-table__wrap {
+    border-bottom: 0 none; }
+  .al-tab.al-tab-type__card .al-tab__pane {
+    bottom: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    margin-left: -1px; }
+    .al-tab.al-tab-type__card .al-tab__pane.active {
+      border-left-color: #e6e6e6;
+      border-right-color: #e6e6e6;
+      background-color: #fff; }
+      .al-tab.al-tab-type__card .al-tab__pane.active::after {
+        top: inherit;
+        bottom: -2px;
+        height: 1px;
+        background-color: #fff; }
+
+.al-table {
+  overflow: auto; }
+  .al-table table {
+    width: 100%;
+    border-collapse: collapse; }
+  .al-table th {
+    padding: 10px 15px; }
+  .al-table td {
+    padding: 6px 15px; }
+  .al-table th,
+  .al-table td {
+    font-weight: 400;
+    color: #404040;
+    line-height: 1;
+    white-space: nowrap;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #e6e6e6; }
+  .al-table tr:hover td {
+    background-color: #f8f8f8; }
+  .al-table .al-table__header {
+    background-color: #f8f8f8; }
+  .al-table .al-table__body {
+    position: relative;
+    top: -1px; }
+    .al-table .al-table__body .al-btn {
+      margin-bottom: 0; }
+
+.al-menu {
+  float: left;
+  width: auto;
+  min-width: 180px;
+  color: #cdcdcd;
+  line-height: 40px;
+  background-color: #393d49; }
+  .al-menu .al-menu__title {
+    height: 40px;
+    padding: 0 20px;
+    cursor: pointer; }
+    .al-menu .al-menu__title:hover {
+      background-color: #4b4f5b; }
+    .al-menu .al-menu__title.active {
+      color: #fff;
+      background-color: #1f8ae9; }
+  .al-menu .al-menu__title + .al-menu__group {
+    display: none; }
+
+.al-menu__group > .al-menu__item.active > .al-menu__group {
+  display: block;
+  background-color: #23262f; }
+
+.al-menu__group .al-menu__group .al-menu__title {
+  padding-left: 40px; }
+
+.al-menu__group .al-menu__group .al-menu__group .al-menu__title {
+  padding-left: 60px; }
