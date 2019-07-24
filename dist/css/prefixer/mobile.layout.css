@@ -7,6 +7,21 @@
 .text-center {
   text-align: center; }
 
+.flex-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+html, body, .layout-page {
+  height: 100%; }
+
+.body,
+.layout-page {
+  background: #eee; }
+
 .layout-page {
   width: 100%;
   min-height: 100%;
@@ -21,6 +36,28 @@
     width: 100%;
     background-color: #fff;
     border-bottom: 1px solid #e1e1e1; }
+  .layout-page .layout-content {
+    max-width: 540px;
+    height: 100%;
+    margin: 0 auto; }
+
+.btn {
+  display: inline-block;
+  width: 1.41333rem;
+  height: 0.69333rem;
+  text-align: center;
+  line-height: 0.66667rem;
+  border-radius: 2px; }
+  .btn.btn-outline {
+    border: solid 1px #7f7f7f; }
+  .btn.btn-normal {
+    border: solid 1px transparent; }
+
+.abs {
+  position: absolute; }
+
+.rel {
+  position: relative; }
 
 .layout-title {
   height: 1.2rem;

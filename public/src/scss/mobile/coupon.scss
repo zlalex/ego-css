@@ -1,0 +1,45 @@
+@import 'var';
+.coupon-list-wrapper{
+  margin: px2rem(20px) 0;
+  .coupon-item{
+    margin-bottom: px2rem(20px);
+    padding: px2rem(34px);
+    background: #fff;
+  }
+
+  .coupon-img-wrapper{
+    width: px2rem(160px);
+    height: px2rem(160px);
+    margin-right: px2rem(20px);
+    background-color: #f4f4f4;
+    p{
+      top: 50%;
+      left: px2rem(24px);
+      transform: translateY(-50%);
+      font-size: px2rem(12px);
+      span{
+        display: block;
+      }
+    }
+  }
+  .coupon-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    line-height: px2rem(80px);
+    font-size: px2rem(26px);
+  }
+  .coupon-operation{
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 120px;
+    .btn{
+      position: absolute;
+      right: 0;
+    }
+    .btn-normal{
+      color: #ab2b2c;
+    }
+  }
+}

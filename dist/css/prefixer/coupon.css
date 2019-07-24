@@ -1,0 +1,46 @@
+.coupon-list-wrapper {
+  margin: 0.26667rem 0; }
+  .coupon-list-wrapper .coupon-item {
+    margin-bottom: 0.26667rem;
+    padding: 0.45333rem;
+    background: #fff; }
+  .coupon-list-wrapper .coupon-img-wrapper {
+    width: 2.13333rem;
+    height: 2.13333rem;
+    margin-right: 0.26667rem;
+    background-color: #f4f4f4; }
+    .coupon-list-wrapper .coupon-img-wrapper p {
+      top: 50%;
+      left: 0.32rem;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      font-size: 0.16rem; }
+      .coupon-list-wrapper .coupon-img-wrapper p span {
+        display: block; }
+  .coupon-list-wrapper .coupon-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    line-height: 1.06667rem;
+    font-size: 0.34667rem; }
+  .coupon-list-wrapper .coupon-operation {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    width: 120px; }
+    .coupon-list-wrapper .coupon-operation .btn {
+      position: absolute;
+      right: 0; }
+    .coupon-list-wrapper .coupon-operation .btn-normal {
+      color: #ab2b2c; }

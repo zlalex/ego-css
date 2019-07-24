@@ -7,6 +7,20 @@
 .text-center {
     text-align: center;
 }
+
+.flex-box{
+    display: flex;
+    justify-content: space-between;
+}
+html,body,.layout-page{
+    height: 100%;
+}
+
+.body,
+.layout-page {
+    background: #eee;
+}
+
 .layout-page {
     width: 100%;
     min-height: 100%;
@@ -22,7 +36,38 @@
         background-color: #fff;
         border-bottom: 1px solid #e1e1e1;
     }
+    .layout-content{
+        max-width: 540px;
+        height: 100%;
+        margin: 0 auto;
+    }
 }
+
+.btn{
+    display: inline-block;
+    width: px2rem(106px);
+    height: px2rem(52px);
+    text-align: center;
+    line-height: px2rem(50px);
+    border-radius: 2px;
+    &.btn-outline{
+        border: solid 1px #7f7f7f;
+    }
+    &.btn-normal{
+        border: solid 1px transparent;
+    }
+}
+
+.abs{
+    position: absolute;
+}
+
+.rel{
+    position: relative;
+}
+
+
+
 .layout-title {
     height: 1.2rem;
     line-height: 1.2rem;
