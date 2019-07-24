@@ -1,0 +1,8 @@
+// px转rem值
+@function px2rem($px, $base-font-size: $design-unit) {
+  @return ($px / $base-font-size) * 1rem;
+}
+// 设计稿宽度 用于定义rem基准
+$design-width:            750px !default;
+$design-unit:             $design-width/10 !default;
+$device-max-width:        540px;

@@ -7,7 +7,10 @@ var gulp = require('gulp'),
 
 // 编译sass
 gulp.task('sass', function() {
-    gulp.src(['./public/src/scss/*.scss', './public/src/scss/layout/*.scss'])
+    gulp.src([
+        './public/src/scss/*.scss',
+        './public/src/scss/mobile/*.scss',
+        './public/src/scss/layout/*.scss'])
         .pipe(sass())
         .pipe(gulp.dest('./dist/css'))
         .pipe(reload({ stream: true }));
@@ -39,7 +42,7 @@ gulp.task('service', ['sass'], function() {
         server: './dist'
     });
 
-    gulp.watch(['./public/src/scss/*.scss', './public/src/scss/layout/*.scss'], ['sass']);
+    gulp.watch(['./public/src/scss/*.scss', './public/src/scss/mobile/*.scss', './public/src/scss/layout/*.scss'], ['sass']);
 
     gulp.watch('./dist/css/*.css', ['auto-prefixer']);
 
