@@ -141,7 +141,8 @@
         float: left;
         width: $checkbox-size;
         height: $checkbox-size;
-        @include border($cd);
+        border: solid 1px #cdcdcd;
+        // @include border($cd);
         &::before{
             content: "";
             position: absolute;

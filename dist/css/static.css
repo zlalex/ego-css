@@ -250,9 +250,7 @@ ol {
   float: left;
   width: 18px;
   height: 18px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #cdcdcd; }
+  border: solid 1px #cdcdcd; }
   .al-checkbox .al-checkbox__group::before {
     content: "";
     position: absolute;
